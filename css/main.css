@@ -1,3 +1,13 @@
+:root{
+  /* 
+    valid: --special-color --specialcolor --specialColor 
+    invalid: --special color
+  */
+  --special-color: tomato;
+  --second-color: #551CF1;
+  --light-color: ivory;
+  --dark-color: #333;
+}
 /* . is for class selector */
 .container{
   max-width: 900px;
@@ -20,8 +30,8 @@ main > p{
 }
 /* + is adjacent combinator */
 h2 + p{
-  background-color: black;
-  color: white;
+  background-color: var(--dark-color);
+  color: var(--light-color);
   padding: 1rem;
 }
 /* ~ is sibling combinator */
@@ -33,10 +43,10 @@ h2 + p{
 }
 /* [] is attribute selector */
 a[href="#"]{
- color: tomato; 
+ color: var(--special-color); 
 }
 a[href^="http"]{
-  border-left: 4px solid #551CF1;
+  border-left: 4px solid var(--second-color);
 }
 /* State related pseudo classes */
 /* LoVe HAte */
@@ -62,14 +72,14 @@ nav a:active{
 a[href$=".pdf"]::after{
   content: "\2913";
   font-size: 1.25rem;
-  color: tomato;
+  color: var(--special-color);
 }
 h2+p::first-line{
-  color: tomato;
+  color: var(--special-color);
 }
 h3+p::first-letter{
-  background-color: #551CF1;
-  color: white;
+  background-color: var(--second-color);
+  color: var(--light-color);
   padding: .25rem;
   margin-right: .10rem;
 }
