@@ -83,3 +83,12 @@ h3+p::first-letter{
   padding: .25rem;
   margin-right: .10rem;
 }
+/* calc() function */
+.google{
+  display: block;
+  background-color: lavender;
+  width: calc(100% - 6rem - 4px);
+  padding: 2rem;
+  margin: 1rem;
+  /* also there is a 4px border on the left */
+}
